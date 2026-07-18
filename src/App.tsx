@@ -56,6 +56,7 @@ function App() {
         <h1 className="text-2xl font-bold text-center mb-4 text-emerald-400">
           ⚡ SMT Control App - Conexión a Supabase
         </h1>
+        <h1>Johan Cacerez</h1>
 
         {cargando && (
           <p className="text-center text-gray-400">
