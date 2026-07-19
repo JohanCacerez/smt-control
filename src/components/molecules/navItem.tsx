@@ -1,4 +1,4 @@
-import { CustomNavLink } from "../../components/atoms/Navlink";
+import { CustomNavLink } from "../atoms/Navlink";
 
 // Asumamos que podrías tener un átomo Icon en el futuro
 // import { Icon } from '../../1-atoms/Icon';
