@@ -6,7 +6,7 @@ interface CustomNavLinkProps {
   children: React.ReactNode;
 }
 
-export const CustomNavLink = ({ to, children }: CustomNavLinkProps) => {
+export const NavLink = ({ to, children }: CustomNavLinkProps) => {
   // Clases base que se aplican siempre
   const baseClasses =
     "block px-4 py-3 text-white transition-colors duration-200 hover:bg-slate-700";
