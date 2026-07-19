@@ -1,4 +1,4 @@
-import { NavLink } from "../atoms/Navlink";
+import { NavLink } from "../atoms/NavLink";
 
 // Asumamos que podrías tener un átomo Icon en el futuro
 // import { Icon } from '../../1-atoms/Icon';
