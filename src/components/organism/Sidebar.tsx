@@ -6,18 +6,27 @@ export const Sidebar = () => {
     <aside className="w-64 h-screen bg-slate-800 flex flex-col">
       {/* Sección del Logo/Título */}
       <div className="p-5 text-white text-2xl font-bold border-b border-slate-700">
-        SMT-CONTROL
+        <NavItem to="/" label="SMT CONTROL" iconName="FaMicrochip" />
       </div>
 
       {/* Contenedor de la navegación */}
       <nav className="flex-grow pt-4">
-        <NavItem to="/dashboard" label="Dashboard" />
-        <NavItem to="/users" label="Usuarios" />
-        <NavItem to="/settings" label="Configuración" />
+        <NavItem to="/dashboard" label="Dashboard" iconName="FaChartColumn" />
+        <NavItem
+          to="/lines_production"
+          label="Líneas de Producción"
+          iconName="FaIndustry"
+        />
+        <NavItem to="/process" label="Procesos" iconName="FaCircleNodes" />
+        <NavItem to="/team" label="Equipo" iconName="FaUsers" />
+        <NavItem to="/tickets" label="Tickets" iconName="FaToolbox" />
+        <NavItem to="/settings" label="Configuración" iconName="FaGear" />
       </nav>
 
       {/* Opcional: Sección del Perfil de Usuario al final */}
-      <div className="p-4 border-t border-slate-700 text-white">Perfil</div>
+      <div className="p-4 border-t border-slate-700 text-white">
+        <NavItem to="/user" label="User" iconName="FaRegCircleUser" />
+      </div>
     </aside>
   );
 };
