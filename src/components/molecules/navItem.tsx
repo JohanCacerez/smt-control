@@ -13,7 +13,6 @@ export const NavItem = ({ to, label }: NavItemProps) => {
   return (
     <NavLink to={to}>
       <div className="flex items-center gap-x-3">
-        {/* {iconName && <Icon name={iconName} className="w-5 h-5" />} */}
         <span>{label}</span>
       </div>
     </NavLink>

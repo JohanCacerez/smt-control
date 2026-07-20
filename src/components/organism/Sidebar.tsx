@@ -12,7 +12,10 @@ export const Sidebar = () => {
       {/* Contenedor de la navegación */}
       <nav className="flex-grow pt-4">
         <NavItem to="/dashboard" label="Dashboard" />
-        <NavItem to="/users" label="Usuarios" />
+        <NavItem to="/lines_production" label="Líneas de Producción" />
+        <NavItem to="/process" label="Procesos" />
+        <NavItem to="/team" label="Equipo" />
+        <NavItem to="/tickets" label="Tickets" />
         <NavItem to="/settings" label="Configuración" />
       </nav>
 
