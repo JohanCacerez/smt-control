@@ -25,7 +25,7 @@ export const Sidebar = () => {
 
       {/* Opcional: Sección del Perfil de Usuario al final */}
       <div className="p-4 border-t border-slate-700 text-white">
-        <NavItem to="/dashboard" label="User" iconName="FaRegCircleUser" />
+        <NavItem to="/user" label="User" iconName="FaRegCircleUser" />
       </div>
     </aside>
   );

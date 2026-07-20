@@ -10,6 +10,7 @@ const ProcessPage = () => <h1>Página de Proceso</h1>;
 const NotFoundPage = () => <h1>404: Página no encontrada</h1>;
 const TeamPage = () => <h1>Página del Equipo</h1>;
 const TicketsPage = () => <h1>Página de Tickets</h1>;
+const UserPage = () => <h1>Página del Usuario</h1>;
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="team" element={<TeamPage />} />
         <Route path="tickets" element={<TicketsPage />} />
         <Route path="settings" element={<SettingsPage />} />
+        <Route path="user" element={<UserPage />} />
         {/* Cualquier otra ruta no encontrada mostrará esta página */}
         <Route path="*" element={<NotFoundPage />} />
       </Route>
