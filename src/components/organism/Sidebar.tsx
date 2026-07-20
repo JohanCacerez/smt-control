@@ -11,12 +11,20 @@ export const Sidebar = () => {
 
       {/* Contenedor de la navegación */}
       <nav className="flex-grow pt-4">
-        <NavItem to="/dashboard" label="Dashboard" />
-        <NavItem to="/lines_production" label="Líneas de Producción" />
-        <NavItem to="/process" label="Procesos" />
-        <NavItem to="/team" label="Equipo" />
-        <NavItem to="/tickets" label="Tickets" />
-        <NavItem to="/settings" label="Configuración" />
+        <NavItem to="/dashboard" label="Dashboard" iconName="FaChartColumn" />
+        <NavItem
+          to="/lines_production"
+          label="Líneas de Producción"
+          iconName="FaChartColumn"
+        />
+        <NavItem to="/process" label="Procesos" iconName="FaChartColumn" />
+        <NavItem to="/team" label="Equipo" iconName="FaChartColumn" />
+        <NavItem to="/tickets" label="Tickets" iconName="FaChartColumn" />
+        <NavItem
+          to="/settings"
+          label="Configuración"
+          iconName="FaChartColumn"
+        />
       </nav>
 
       {/* Opcional: Sección del Perfil de Usuario al final */}
