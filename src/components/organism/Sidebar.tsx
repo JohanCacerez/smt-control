@@ -15,16 +15,12 @@ export const Sidebar = () => {
         <NavItem
           to="/lines_production"
           label="Líneas de Producción"
-          iconName="FaChartColumn"
+          iconName="FaIndustry"
         />
-        <NavItem to="/process" label="Procesos" iconName="FaChartColumn" />
-        <NavItem to="/team" label="Equipo" iconName="FaChartColumn" />
-        <NavItem to="/tickets" label="Tickets" iconName="FaChartColumn" />
-        <NavItem
-          to="/settings"
-          label="Configuración"
-          iconName="FaChartColumn"
-        />
+        <NavItem to="/process" label="Procesos" iconName="FaMicrochip" />
+        <NavItem to="/team" label="Equipo" iconName="FaUsers" />
+        <NavItem to="/tickets" label="Tickets" iconName="FaToolbox" />
+        <NavItem to="/settings" label="Configuración" iconName="FaGear" />
       </nav>
 
       {/* Opcional: Sección del Perfil de Usuario al final */}
