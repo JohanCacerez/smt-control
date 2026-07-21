@@ -8,6 +8,7 @@ interface CustomInputTextProps extends InputHTMLAttributes<HTMLInputElement> {
 export const InputText = ({
   focusIsActive = false,
   className = "",
+  placeholder = "Escribe aquí...",
   ...rest
 }: CustomInputTextProps) => {
   const baseStyles =
@@ -17,6 +18,7 @@ export const InputText = ({
     <input
       type="text"
       autoFocus={focusIsActive}
+      placeholder={placeholder}
       className={`${baseStyles} ${className}`}
       {...rest}
     />
