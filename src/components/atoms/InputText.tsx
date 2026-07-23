@@ -9,6 +9,7 @@ export const InputText = ({
   focusIsActive = false,
   className = "",
   placeholder = "Escribe aquí...",
+  type = "text",
   ...rest
 }: CustomInputTextProps) => {
   const baseStyles =
@@ -16,7 +17,7 @@ export const InputText = ({
 
   return (
     <input
-      type="text"
+      type={type}
       autoFocus={focusIsActive}
       placeholder={placeholder}
       className={`${baseStyles} ${className}`}

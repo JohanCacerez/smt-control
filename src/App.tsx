@@ -1,9 +1,11 @@
 import { Routes, Route } from "react-router-dom";
 import { MainLayout } from "./components/templates/MainLayout";
 
+import { Login } from "./pages/Login";
+
 // Simulación de los componentes de página.
 // En un proyecto real, estos serían importados de 'src/components/5-pages/...'
-const DashboardPage = () => <h1>Página de Dashboard</h1>;
+const DashboardPage = () => <Login />;
 const LinesProductionPage = () => <h1>Página de Líneas de Producción</h1>;
 const SettingsPage = () => <h1>Página de Configuración</h1>;
 const ProcessPage = () => <h1>Página de Proceso</h1>;
