@@ -5,7 +5,7 @@ import { Login } from "./pages/Login";
 
 // Simulación de los componentes de página.
 // En un proyecto real, estos serían importados de 'src/components/5-pages/...'
-const DashboardPage = () => <Login />;
+const DashboardPage = () => <h1>Página de Dashboard</h1>;
 const LoginPage = () => <Login />;
 const LinesProductionPage = () => <h1>Página de Líneas de Producción</h1>;
 const SettingsPage = () => <h1>Página de Configuración</h1>;

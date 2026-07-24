@@ -1,1 +1,30 @@
+/* src/index.css */
 @import "tailwindcss";
+
+@theme {
+  /* Colores de marca / Identidad */
+  --color-brand-light: #3b82f6; /* Azul claro */
+  --color-brand: #1d4ed8; /* Azul principal (se usa con bg-brand) */
+  --color-brand-dark: #1e3a8a; /* Azul oscuro */
+
+  /* Colores semánticos para Fondos (Backgrounds) */
+  --color-background-light: #f8fafc; /* Fondo claro de la app (slate-50) */
+  --color-background-card-light: #ffffff; /* Tarjetas/Formularios en modo claro */
+  --color-background-dark: #0f172a; /* Fondo oscuro de la app (slate-900) */
+  --color-background-card-dark: #1e293b; /* Tarjetas/Formularios en modo oscuro */
+
+  /* Colores semánticos para Textos */
+  --color-content-title: #0f172a; /* Títulos (slate-900) */
+  --color-content-body: #334155; /* Texto general (slate-700) */
+  --color-content-muted: #64748b; /* Textos secundarios (slate-500) */
+  /* Variantes de texto para Modo Oscuro */
+  --color-content-title-dark: #f8fafc;
+  --color-content-body-dark: #e2e8f0;
+  --color-content-muted-dark: #94a3b8;
+
+  /* Estados de Feedback */
+  --color-status-success: #10b981;
+  --color-status-warning: #f59e0b;
+  --color-status-error: #ef4444;
+  --color-status-info: #3b82f6;
+}
