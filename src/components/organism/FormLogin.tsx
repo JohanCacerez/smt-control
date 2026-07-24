@@ -31,8 +31,8 @@ export const FormLogin = () => {
           notifyError(response.error.message);
         } else {
           console.log("Inicio de sesión exitoso:", response.data);
-          navigate("/dashboard");
           notifySuccess();
+          navigate("/dashboard");
         }
       });
   };
