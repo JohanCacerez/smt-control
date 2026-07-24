@@ -1,6 +1,10 @@
 import { useState } from "react";
 
+import { useNavigate } from "react-router-dom";
+
 import { supabase } from "../../utils/supabase";
+
+import toast, { Toaster } from "react-hot-toast";
 
 import { Title } from "../atoms/Title";
 import { InputField } from "../molecules/InputField";
@@ -9,6 +13,14 @@ import { NavItem } from "../molecules/navItem";
 export const FormLogin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
+
+  //Toast notification
+  const notifySuccess = () => toast.success("Inicio de sesión exitoso");
+  const notifyError = (message: string) =>
+    toast.error(`Error al iniciar sesión: ${message}`);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     await supabase.auth
@@ -16,8 +28,11 @@ export const FormLogin = () => {
       .then((response) => {
         if (response.error) {
           console.error("Error al iniciar sesión:", response.error.message);
+          notifyError(response.error.message);
         } else {
           console.log("Inicio de sesión exitoso:", response.data);
+          navigate("/dashboard");
+          notifySuccess();
         }
       });
   };
@@ -66,6 +81,7 @@ export const FormLogin = () => {
           />
         </div>
       </form>
+      <Toaster />
     </div>
   );
 };
