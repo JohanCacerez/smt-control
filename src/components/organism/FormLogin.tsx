@@ -1,11 +1,25 @@
+import { useState } from "react";
+
+import { supabase } from "../../utils/supabase";
+
 import { Title } from "../atoms/Title";
 import { InputField } from "../molecules/InputField";
 import { NavItem } from "../molecules/navItem";
 
 export const FormLogin = () => {
-  const handleSubmit = (e: React.FormEvent) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Aquí irá tu lógica de autenticación (por ejemplo, con tu servicio de Supabase)
+    await supabase.auth
+      .signInWithPassword({ email, password })
+      .then((response) => {
+        if (response.error) {
+          console.error("Error al iniciar sesión:", response.error.message);
+        } else {
+          console.log("Inicio de sesión exitoso:", response.data);
+        }
+      });
   };
 
   return (
@@ -24,12 +38,14 @@ export const FormLogin = () => {
           labelText="Correo electrónico"
           type="email"
           placeholder="Ingresa tu correo electrónico"
+          onChange={(e) => setEmail(e.target.value)}
         />
 
         <InputField
           labelText="Contraseña"
           type="password"
           placeholder="Ingresa tu contraseña"
+          onChange={(e) => setPassword(e.target.value)}
         />
 
         {/* 4. Botón adaptado a tus variables de color v4 */}
