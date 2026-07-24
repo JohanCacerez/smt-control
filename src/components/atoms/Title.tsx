@@ -9,7 +9,8 @@ interface TitleProps {
 export const Title = ({ text, className = "", level = "h1" }: TitleProps) => {
   const Tag = level;
 
-  const baseClasses = "font-bold tracking-tight text-gray-900 dark:text-white";
+  const baseClasses =
+    "font-bold tracking-tight text-color-content-title dark:text-color-content-title-dark";
 
   const sizeClasses: Record<TitleLevel, string> = {
     h1: "text-3xl md:text-4xl",
