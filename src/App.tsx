@@ -6,6 +6,7 @@ import { Login } from "./pages/Login";
 // Simulación de los componentes de página.
 // En un proyecto real, estos serían importados de 'src/components/5-pages/...'
 const DashboardPage = () => <Login />;
+const LoginPage = () => <Login />;
 const LinesProductionPage = () => <h1>Página de Líneas de Producción</h1>;
 const SettingsPage = () => <h1>Página de Configuración</h1>;
 const ProcessPage = () => <h1>Página de Proceso</h1>;
@@ -23,6 +24,7 @@ function App() {
         <Route index element={<DashboardPage />} />{" "}
         {/* La página por defecto en "/" */}
         <Route path="dashboard" element={<DashboardPage />} />
+        <Route path="login" element={<LoginPage />} />
         <Route path="lines_production" element={<LinesProductionPage />} />
         <Route path="process" element={<ProcessPage />} />
         <Route path="team" element={<TeamPage />} />
