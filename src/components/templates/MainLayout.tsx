@@ -9,7 +9,7 @@ export const MainLayout = () => {
       <Sidebar />
 
       {/* El contenido de la página cambiará aquí */}
-      <main className="flex-grow p-8">
+      <main className="grow p-8">
         {/* <Outlet/> actúa como un marcador de posición para las rutas anidadas */}
         <Outlet />
       </main>
