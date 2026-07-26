@@ -1,11 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 import { MainLayout } from "./components/templates/MainLayout";
-
+import { Toaster } from "react-hot-toast";
 import { Login } from "./pages/Login";
 import { Dashboard } from "./pages/Dashboard";
 
-// Simulación de los componentes de página.
-// En un proyecto real, estos serían importados de 'src/components/5-pages/...'
 const LoginPage = () => <Login />;
 const DashboardPage = () => <Dashboard />;
 const LinesProductionPage = () => <h1>Página de Líneas de Producción</h1>;
@@ -18,24 +16,38 @@ const UserPage = () => <h1>Página del Usuario</h1>;
 
 function App() {
   return (
-    <Routes>
-      {/* Ruta Padre que renderiza el Layout */}
-      <Route path="/" element={<MainLayout />}>
-        {/* Rutas Hijas que se renderizarán dentro del <Outlet /> del MainLayout */}
-        <Route index element={<DashboardPage />} />{" "}
-        {/* La página por defecto en "/" */}
-        <Route path="dashboard" element={<DashboardPage />} />
+    <>
+      {/* El Toaster global queda en el nivel más alto, libre de layouts */}
+      <Toaster
+        position="top-right"
+        reverseOrder={false}
+        toastOptions={{
+          style: {
+            background: "#333",
+            color: "#fff",
+            zIndex: 9999, // 📌 Forzamos a que siempre flote por encima de todo
+          },
+        }}
+      />
+
+      <Routes>
+        {/* 🔑 RUTA INDEPENDIENTE: El login no tiene barra lateral ni menús del MainLayout */}
         <Route path="login" element={<LoginPage />} />
-        <Route path="lines_production" element={<LinesProductionPage />} />
-        <Route path="process" element={<ProcessPage />} />
-        <Route path="team" element={<TeamPage />} />
-        <Route path="tickets" element={<TicketsPage />} />
-        <Route path="settings" element={<SettingsPage />} />
-        <Route path="user" element={<UserPage />} />
-        {/* Cualquier otra ruta no encontrada mostrará esta página */}
-        <Route path="*" element={<NotFoundPage />} />
-      </Route>
-    </Routes>
+
+        {/* 🔒 RUTAS CON LAYOUT: Todo el resto de la app que requiere estar logueado */}
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<DashboardPage />} />
+          <Route path="dashboard" element={<DashboardPage />} />
+          <Route path="lines_production" element={<LinesProductionPage />} />
+          <Route path="process" element={<ProcessPage />} />
+          <Route path="team" element={<TeamPage />} />
+          <Route path="tickets" element={<TicketsPage />} />
+          <Route path="settings" element={<SettingsPage />} />
+          <Route path="user" element={<UserPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Route>
+      </Routes>
+    </>
   );
 }
 

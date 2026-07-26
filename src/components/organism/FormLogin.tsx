@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import { supabase } from "../../utils/supabase";
 
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 
 import { Title } from "../atoms/Title";
 import { InputField } from "../molecules/InputField";
@@ -81,7 +81,6 @@ export const FormLogin = () => {
           />
         </div>
       </form>
-      <Toaster />
     </div>
   );
 };
