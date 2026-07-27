@@ -1,14 +1,18 @@
 import { Routes, Route } from "react-router-dom";
+
 import { MainLayout } from "./components/templates/MainLayout";
+
 import { Toaster } from "react-hot-toast";
+
 import { Login } from "./pages/Login";
 import { Dashboard } from "./pages/Dashboard";
+import { Process } from "./pages/Process";
 
 const LoginPage = () => <Login />;
 const DashboardPage = () => <Dashboard />;
 const LinesProductionPage = () => <h1>Página de Líneas de Producción</h1>;
 const SettingsPage = () => <h1>Página de Configuración</h1>;
-const ProcessPage = () => <h1>Página de Proceso</h1>;
+const ProcessPage = () => <Process />;
 const NotFoundPage = () => <h1>404: Página no encontrada</h1>;
 const TeamPage = () => <h1>Página del Equipo</h1>;
 const TicketsPage = () => <h1>Página de Tickets</h1>;
