@@ -1,10 +1,12 @@
 import { Icon } from "../atoms/Card/Icon";
 import { Title } from "../atoms/Title";
 import bgPickAndPlace from "../../assets/Bg_images/PickAndPlace.png";
+import { Profile } from "../atoms/Card/Profile";
 
 export const ProcessCard = () => {
   return (
-    <div className="max-w-md rounded-t-2xl bg-gray-400 overflow-hidden">
+    // Se cambiaron las clases: se eliminó `max-w-md` y se añadieron `w-96` y `h-[480px]` para un tamaño fijo.
+    <div className="w-96 h-120 rounded-t-2xl bg-gray-400 overflow-hidden">
       <section
         className="bg-cover bg-center rounded-t-2xl bg-no-repeat p-6 py-10 min-h-40 flex flex-row items-center"
         style={{ backgroundImage: `url(${bgPickAndPlace})` }}
@@ -18,12 +20,11 @@ export const ProcessCard = () => {
       <section className="p-6 flex flex-col gap-4">
         <div>
           <Title text="Descripción del proceso" level="h5" />
+          {/* Aquí puedes añadir más contenido descriptivo si es necesario */}
         </div>
         <div>
           <Title text="Personal a cargo" level="h5" />
-          <p>Persona 1</p>
-          <p>Persona 2</p>
-          <p>Persona 3</p>
+          <Profile />
         </div>
       </section>
     </div>
