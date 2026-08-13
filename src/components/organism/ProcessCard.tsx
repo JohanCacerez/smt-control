@@ -9,7 +9,7 @@ interface ProcessCardProps {
 export const ProcessCard = ({ bgImage }: ProcessCardProps) => {
   return (
     // Se cambiaron las clases: se eliminó `max-w-md` y se añadieron `w-96` y `h-[480px]` para un tamaño fijo.
-    <div className="w-96 h-120 rounded-t-2xl bg-gray-400 overflow-hidden">
+    <div className="w-96 h-[480px] rounded-t-2xl bg-gray-400 overflow-hidden">
       <section
         className="bg-cover bg-center rounded-t-2xl bg-no-repeat p-6 py-10 min-h-40 flex flex-row items-center"
         style={{ backgroundImage: `url(${bgImage})` }}

@@ -1,6 +1,6 @@
 import { ProcessCard } from "../components/organism/ProcessCard";
 
-import bgPickAndPlace from "../../assets/Bg_images/PickAndPlace.png";
+import bgPickAndPlace from "../assets/Bg_images/PickAndPlace.png";
 
 export const Process = () => {
   return (
