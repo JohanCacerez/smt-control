@@ -1,6 +1,10 @@
 import { ProcessCard } from "../components/organism/ProcessCard";
 
 import bgPickAndPlace from "../assets/Bg_images/PickAndPlace.png";
+import bgAOI from "../assets/Bg_images/AOI.webp";
+import bgAXI from "../assets/Bg_images/AXI.webp";
+
+import bgConveyor from "../assets/Bg_images/NUTEK.webp";
 
 // Importa la imagen desde su ruta relativa correcta
 import PAPIcon from "../assets/Icons_process/PickAndPlace.webp";
@@ -31,7 +35,7 @@ export const Process = () => {
           ]}
         />
         <ProcessCard
-          bgImage={bgPickAndPlace}
+          bgImage={bgAOI}
           iconSrc={AOIIcon}
           proccessName="AOI"
           description="Este es un proceso de ejemplo que describe cómo funciona Automatic Optical Inspection en la línea de producción."
@@ -41,7 +45,7 @@ export const Process = () => {
           ]}
         />
         <ProcessCard
-          bgImage={bgPickAndPlace}
+          bgImage={bgAXI}
           iconSrc={AXIIcon}
           proccessName="AXI"
           description="Este es un proceso de ejemplo que describe cómo funciona Automated X-ray Inspection en la línea de producción."
@@ -61,7 +65,7 @@ export const Process = () => {
           ]}
         />
         <ProcessCard
-          bgImage={bgPickAndPlace}
+          bgImage={bgConveyor}
           iconSrc={ConveyorIcon}
           proccessName="Conveyor"
           description="Este es un proceso de ejemplo que describe cómo funciona el conveyor en la línea de producción."

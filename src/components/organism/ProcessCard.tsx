@@ -10,7 +10,7 @@ interface ProcessCardProps {
   profiles?: {
     name: string;
     role: string;
-    bgcolor?: "red-100" | "amber-100" | "blue-100";
+    bgcolor?: "red-100" | "amber-100" | "blue-100" | "green-100" | "yellow-100";
   }[];
 }
 
@@ -23,7 +23,8 @@ export const ProcessCard = ({
 }: ProcessCardProps) => {
   return (
     // Se cambiaron las clases: se eliminó `max-w-md` y se añadieron `w-96` y `h-[480px]` para un tamaño fijo.
-    <div className="w-96 h-120 rounded-t-2xl bg-gray-400 overflow-hidden">
+
+    <div className="w-96 h-120 rounded-t-2xl bg-gray-400 overflow-hidden shadow-xl transition-all duration-300 ease-out hover:shadow-2xl hover:-translate-y-2">
       <section
         className="bg-cover bg-center rounded-t-2xl bg-no-repeat p-6 py-10 min-h-40 flex flex-row items-center"
         style={{ backgroundImage: `url(${bgImage})` }}
