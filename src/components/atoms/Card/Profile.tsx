@@ -25,7 +25,7 @@ export const Profile = ({
   return (
     <div
       // 3. Aplicamos la clase completa que seleccionamos del mapa.
-      className={`flex flex-row items-center gap-2 ${backgroundColorClass} rounded-2xl p-2 shadow-md`}
+      className={`flex flex-row items-center gap-2 m-2 ${backgroundColorClass} rounded-2xl p-2 shadow-md`}
     >
       <h3>{name}</h3>
       <p className="text-gray-600">{role}</p>
