@@ -10,7 +10,7 @@ export const MainLayout = () => {
       <Sidebar />
 
       {/* CAMBIO 2: Añade `overflow-y-auto` al <main> y usa `flex-1` para que ocupe el espacio restante. */}
-      <main className="flex justify-center items-center">
+      <main className="">
         {/* <Outlet/> actúa como un marcador de posición para las rutas anidadas */}
         <Outlet />
       </main>
