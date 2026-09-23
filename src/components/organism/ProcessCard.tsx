@@ -10,7 +10,7 @@ interface ProcessCardProps {
   profiles?: {
     name: string;
     role: string;
-    bgcolor?: "red-100" | "amber-100" | "blue-100" | "green-100" | "yellow-100";
+    bgcolor?: "red-100" | "amber-100" | "blue-100";
   }[];
 }
 

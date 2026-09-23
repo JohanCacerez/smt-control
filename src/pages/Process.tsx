@@ -5,6 +5,12 @@ import bgAOI from "../assets/Bg_images/AOI.webp";
 import bgAXI from "../assets/Bg_images/AXI.webp";
 
 import bgConveyor from "../assets/Bg_images/NUTEK.webp";
+import bgHotcaulking from "../assets/Bg_images/Hotcaulking.webp";
+import bgICT from "../assets/Bg_images/ICT.webp";
+import bgLaser from "../assets/Bg_images/Laser.webp";
+import bgOvenreflow from "../assets/Bg_images/Ovenreflow.webp";
+import bgSPP from "../assets/Bg_images/SPP.webp";
+import bgSPI from "../assets/Bg_images/SPI.webp";
 
 // Importa la imagen desde su ruta relativa correcta
 import PAPIcon from "../assets/Icons_process/PickAndPlace.webp";
@@ -75,7 +81,7 @@ export const Process = () => {
           ]}
         />
         <ProcessCard
-          bgImage={bgPickAndPlace}
+          bgImage={bgHotcaulking}
           iconSrc={HotIcon}
           proccessName="Hotcaulking"
           description="Este es un proceso de ejemplo que describe cómo funciona el hotcaulking en la línea de producción."
@@ -85,7 +91,7 @@ export const Process = () => {
           ]}
         />
         <ProcessCard
-          bgImage={bgPickAndPlace}
+          bgImage={bgICT}
           iconSrc={ICTIcon}
           proccessName="ICT"
           description="Este es un proceso de ejemplo que describe cómo funciona el ICT en la línea de producción."
@@ -95,7 +101,7 @@ export const Process = () => {
           ]}
         />
         <ProcessCard
-          bgImage={bgPickAndPlace}
+          bgImage={bgLaser}
           iconSrc={LaserIcon}
           proccessName="Laser"
           description="Este es un proceso de ejemplo que describe cómo funciona el Laser en la línea de producción."
@@ -105,7 +111,7 @@ export const Process = () => {
           ]}
         />
         <ProcessCard
-          bgImage={bgPickAndPlace}
+          bgImage={bgOvenreflow}
           iconSrc={OvenIcon}
           proccessName="Oven Reflow"
           description="Este es un proceso de ejemplo que describe cómo funciona el Oven Reflow en la línea de producción."
@@ -115,7 +121,7 @@ export const Process = () => {
           ]}
         />
         <ProcessCard
-          bgImage={bgPickAndPlace}
+          bgImage={bgSPP}
           iconSrc={SPPIcon}
           proccessName="SPP"
           description="Este es un proceso de ejemplo que describe cómo funciona el Soldier Paste Print en la línea de producción."
@@ -125,7 +131,7 @@ export const Process = () => {
           ]}
         />
         <ProcessCard
-          bgImage={bgPickAndPlace}
+          bgImage={bgSPI}
           iconSrc={SPIIcon}
           proccessName="SPI"
           description="Este es un proceso de ejemplo que describe cómo funciona el SPI en la línea de producción."
