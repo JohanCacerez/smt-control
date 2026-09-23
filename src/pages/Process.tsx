@@ -28,8 +28,7 @@ import SPPIcon from "../assets/Icons_process/SPP.webp";
 export const Process = () => {
   return (
     <div>
-      Process
-      <section className="grid gap-4 grid-cols-1 md:grid-cols-3">
+      <section className="grid grid-cols-1 md:grid-cols-4">
         <ProcessCard
           bgImage={bgPickAndPlace}
           iconSrc={PAPIcon}
