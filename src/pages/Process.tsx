@@ -34,6 +34,7 @@ export const Process = () => {
           iconSrc={PAPIcon}
           proccessName="Pick and Place"
           description="Este es un proceso de ejemplo que describe cómo funciona el Pick and Place en la línea de producción."
+          to="/pick-and-place"
           profiles={[
             { name: "John Doe", role: "Supervisor", bgcolor: "red-100" },
             { name: "Jane Smith", role: "Operator", bgcolor: "blue-100" },
@@ -44,6 +45,7 @@ export const Process = () => {
           iconSrc={AOIIcon}
           proccessName="AOI"
           description="Este es un proceso de ejemplo que describe cómo funciona Automatic Optical Inspection en la línea de producción."
+          to="/aoi"
           profiles={[
             { name: "John Doe", role: "Supervisor", bgcolor: "red-100" },
             { name: "Jane Smith", role: "Operator", bgcolor: "blue-100" },
@@ -52,6 +54,7 @@ export const Process = () => {
         <ProcessCard
           bgImage={bgAXI}
           iconSrc={AXIIcon}
+          to="/axi"
           proccessName="AXI"
           description="Este es un proceso de ejemplo que describe cómo funciona Automated X-ray Inspection en la línea de producción."
           profiles={[
@@ -60,6 +63,7 @@ export const Process = () => {
           ]}
         />
         <ProcessCard
+          to="/clinching"
           bgImage={bgPickAndPlace}
           iconSrc={ClinchingIcon}
           proccessName="Clinching"
@@ -70,6 +74,7 @@ export const Process = () => {
           ]}
         />
         <ProcessCard
+          to="/conveyor"
           bgImage={bgConveyor}
           iconSrc={ConveyorIcon}
           proccessName="Conveyor"
@@ -80,6 +85,7 @@ export const Process = () => {
           ]}
         />
         <ProcessCard
+          to="/hotcaulking"
           bgImage={bgHotcaulking}
           iconSrc={HotIcon}
           proccessName="Hotcaulking"
@@ -90,6 +96,7 @@ export const Process = () => {
           ]}
         />
         <ProcessCard
+          to="/ict"
           bgImage={bgICT}
           iconSrc={ICTIcon}
           proccessName="ICT"
@@ -100,6 +107,7 @@ export const Process = () => {
           ]}
         />
         <ProcessCard
+          to="/laser"
           bgImage={bgLaser}
           iconSrc={LaserIcon}
           proccessName="Laser"
@@ -110,6 +118,7 @@ export const Process = () => {
           ]}
         />
         <ProcessCard
+          to="/oven-reflow"
           bgImage={bgOvenreflow}
           iconSrc={OvenIcon}
           proccessName="Oven Reflow"
@@ -120,6 +129,7 @@ export const Process = () => {
           ]}
         />
         <ProcessCard
+          to="/spp"
           bgImage={bgSPP}
           iconSrc={SPPIcon}
           proccessName="SPP"
@@ -130,6 +140,7 @@ export const Process = () => {
           ]}
         />
         <ProcessCard
+          to="/spi"
           bgImage={bgSPI}
           iconSrc={SPIIcon}
           proccessName="SPI"
