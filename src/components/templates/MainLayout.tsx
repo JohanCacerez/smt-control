@@ -1,17 +1,20 @@
 import { Outlet } from "react-router-dom";
-// Asegúrate de que la ruta sea correcta, en tu código anterior era ../organism/Sidebar
+// Cambiamos la importación del Sidebar por el nuevo Navbar superior (o tu componente modificado)
 import { Sidebar } from "../organism/Sidebar";
 
 export const MainLayout = () => {
   return (
-    // CAMBIO 1: Usa `h-screen` en lugar de `min-h-screen` para fijar la altura del layout a la pantalla.
-    <div className="">
-      {/* El Sidebar siempre estará presente */}
+    // 1. El contenedor padre ocupa exactamente el alto de la pantalla (h-screen)
+    // y distribuye sus hijos en columna (flex flex-col) sin dejar que nada se desborde (overflow-hidden)
+    <div className="flex flex-col h-screen w-screen overflow-hidden bg-slate-900">
+      {/* 2. La barra de navegación superior se queda fija arriba */}
+      {/* Al no tener clases de overflow, se mantiene siempre visible en su h-16 (64px) */}
       <Sidebar />
 
-      {/* CAMBIO 2: Añade `overflow-y-auto` al <main> y usa `flex-1` para que ocupe el espacio restante. */}
-      <main className="">
-        {/* <Outlet/> actúa como un marcador de posición para las rutas anidadas */}
+      {/* 3. El contenido principal ocupa todo el espacio restante (flex-1) */}
+      {/* y es el único que tiene permitido hacer scroll vertical (overflow-y-auto) */}
+      <main className="flex-1 overflow-y-auto p-6">
+        {/* <Outlet/> renderizará aquí tus páginas (Dashboard, Líneas, Procesos, etc.) */}
         <Outlet />
       </main>
     </div>
