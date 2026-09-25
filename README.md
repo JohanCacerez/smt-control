@@ -1,4 +1,4 @@
-##Agregar un sidebar a un proceso
+## Agregar un sidebar a un proceso
 
 1. Crear el componente sidebar en la carpeta src/components/organism/Sidebars
 2. Importar el componente creado en el modulo "ProccessLayout"
