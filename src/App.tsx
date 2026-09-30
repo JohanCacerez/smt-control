@@ -49,11 +49,29 @@ function App() {
 
           {/* 🛠️ RUTAS ANIDADAS: Procesos SMT con Sidebar Lateral */}
           <Route element={<ProcessLayout />}>
-            <Route
-              path="pick-and-place"
-              element={<h1>Página de Pick and Place</h1>}
-            />
-            <Route path="aoi" element={<h1>Página de AOI</h1>} />
+            {/* 📍 PROCESO: PICK AND PLACE */}
+            <Route path="pick-and-place">
+              {/* Esta se renderiza en la raíz "/pick-and-place" */}
+              <Route
+                index
+                element={<h1>Página de Pick and Place (Inicio)</h1>}
+              />
+              {/* Sub-ruta dinámica: "/pick-and-place/dashboard" */}
+              <Route
+                path="dashboard"
+                element={<h1>Dashboard de Pick and Place</h1>}
+              />
+              {/* Sub-ruta dinámica: "/pick-and-place/feeders" */}
+              <Route path="feeders" element={<h1>Control de Feeders</h1>} />
+            </Route>
+
+            {/* 📍 PROCESO: AOI */}
+            <Route path="aoi">
+              <Route index element={<h1>Página de AOI (Inicio)</h1>} />
+              <Route path="dashboard" element={<h1>Dashboard de AOI</h1>} />
+            </Route>
+
+            {/* 📍 OTROS PROCESOS (Estructurados planos o anidados según lo requieran) */}
             <Route
               path="spp"
               element={<h1>Página de Inspección de Pasta de Soldadura</h1>}

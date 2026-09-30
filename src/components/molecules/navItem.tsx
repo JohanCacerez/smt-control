@@ -8,7 +8,6 @@ interface NavItemProps {
   to: string;
   label: string;
   iconName: IconName;
-  /** Variante de color: 'light' para temas claros (letras oscuras/negras) o 'dark' para temas oscuros (letras claras/blancas) */
   variant?: NavItemVariant;
 }
 
@@ -18,9 +17,6 @@ export const NavItem = ({
   iconName,
   variant = "light",
 }: NavItemProps) => {
-  // 2. Mapeamos las clases de Tailwind según la variante seleccionada
-  // - 'light' usará un texto oscuro/negro (ideal sobre fondos blancos)
-  // - 'dark' usará un texto claro/blanco (ideal sobre fondos negros o azul brand)
   const styles: Record<NavItemVariant, { container: string; icon: string }> = {
     light: {
       container:
